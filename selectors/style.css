@@ -1,90 +1,119 @@
-ul {
-	background-color: dodgerblue;
+* {
+	box-sizing: border-box;
+	/* outline: 1px solid blue; */
 }
 
-ul li {
-	color: white;
-	font-family: sans-serif;
-}
-
-ul li::marker {
-	content: "😀 ";
-}
-ul li:nth-child(5) {
-	text-transform: capitalize;
-}
-
-li > ul > li {
+h1.title {
 	color: red;
 }
 
-li {
-	& ul {
-		& li {
-			color: blue;
-		}
+html {
+	scroll-behavior: smooth;
+}
+
+/* CSS nesting: 
+  - Allows us to group selectors in a parent
+  - Better CSS organization.
+  - Easier managment in the long run.
+*/
+article {
+	min-height: 300px;
+	max-width: 400px;
+	margin: 0 auto;
+	padding: 16px;
+	> .title {
+		font-family: sans-serif;
+		text-align: center;
+		background-color: gray;
+		color: whitesmoke;
+		padding: 8px 0;
+	}
+	/* The & here is needed:
+    - When the selector is a tag
+    - When the selector is a pseudo-selector that belong to the parent
+    Not needed in other cases
+    It basically represent the original selector
+    Here it represent "article"
+  */
+	& p {
+		font-style: italic;
+	}
+	&:has(mark) {
+		background-color: dodgerblue;
+		font-size: larger;
+		color: white;
+		/* Add first letter selector, and style it w/ initial letter */
+	}
+	&:not(#terraforming):hover {
+		background-color: blue;
+		color: whitesmoke;
+	}
+	&:has(:checked) p {
+		display: none;
+	}
+	/* More complex selector along the way */
+}
+
+/* 
+  Dark mode or Light mode preferences? Listen to your users :)
+*/
+
+@media (prefers-color-scheme: dark) {
+	body {
+		background-color: #1a1a1a;
+		color: whitesmoke;
 	}
 }
 
-.card {
-	background-color: antiquewhite;
-	padding: 32px;
-	border-radius: 16px;
-	/* .card p */
-	& p::first-letter {
-		text-transform: uppercase;
-		color: pink;
-	}
-	& span {
-		font-weight: 700;
-	}
-	.title {
-		font-size: 2rem;
-		text-transform: capitalize;
-	}
+/* Accent color */
+body {
+	accent-color: yellow;
 }
 
-element sub-element {
-}
-
-element > direct-children {
-}
-
-ol > li:nth-child(1) + li {
-	color: blue;
-}
-
-/* h3 ~ p {
+/* article > .title {
+	font-family: sans-serif;
+	text-align: center;
+	background-color: gray;
+	color: whitesmoke;
+	padding: 8px 0;
 } */
 
-ul:has(a) {
-	all: initial;
+.title {
+	text-transform: capitalize;
 }
 
-article:not(:has(#main-title)) p {
-	color: burlywood;
+[href="http://ironhack.com"]
+{
+	font-size: larger;
+}
+[href*="https"] {
+	color: red;
 }
 
-input {
-	background-color: gray;
-}
-input:focus {
-	background-color: red;
-}
-
-input[type="password"] {
+[href*="http:"]:visited {
 	color: green;
 }
 
-a[href*="oo"] {
-	font-size: 2rem;
-}
-a[href^="https"] {
-	color: lightblue;
+p::selection {
+	background-color: red;
 }
 
-a[href$=".com"] {
-	background-color: lightgreen;
-	border-radius: 8px;
-	padding: 8px;
+/* table tbody tr:nth-child(2n + 5) {
+	background-color: aquamarine;
+} */
+table tbody tr:nth-child(odd) {
+	background-color: aquamarine;
 }
+
+/* article:has(mark) {
+	min-height: 300px;
+	background-color: dodgerblue;
+	font-size: larger;
+	color: white;
+} */
+/* article:not(#terraforming):hover {
+	background-color: blue;
+} */
+
+/* [id="hadrian"] {}
+[class="title"] {} */

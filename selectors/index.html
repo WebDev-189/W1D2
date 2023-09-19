@@ -3,64 +3,155 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="style.css" />
-		<title>Document</title>
+		<title>Advanced selectors and some surprises !</title>
+		<link rel="stylesheet" href="./style.css" />
 	</head>
 	<body>
-		<ul>
-			<li>hello</li>
-			<li>hello</li>
-			<li>hello</li>
-			<li>hello</li>
-			<li>hello</li>
-			<li>
+		<header>
+			<nav>
 				<ul>
-					<li>This is a nested list item</li>
-					<li>Another nested li</li>
+					<li><a href="https://www.google.com">google</a></li>
+					<li><a href="http://ironhack.com">ironhack</a></li>
+					<li><a href="http://space-jam.com/1996">Space jam</a></li>
 				</ul>
-			</li>
-		</ul>
+			</nav>
+			<nav>
+				<ul>
+					<li><a href="#hadrian">Hadrian's wall</a></li>
+					<li><a href="#terraforming">Terraforming Mars</a></li>
+					<li><a href="#risk">Risk</a></li>
+					<li><a href="#catan">Catan</a></li>
+					<li><a href="#civilization">Civilization</a></li>
+				</ul>
+			</nav>
+		</header>
 
-		<ol>
-			<li>Hadrian's wall</li>
-			<li>Terraforming Mars</li>
-			<li>Risk</li>
-			<li>Catan</li>
-			<li>Civilization</li>
-		</ol>
+		<h1 class="title">board games</h1>
 
-		<div class="card">
-			<h2 class="title">Here is a card element</h2>
-			<p>Lorem <span>i</span>psum dolor sit amet consectetur.</p>
-		</div>
+		<main>
+			<article id="hadrian">
+				<div>
+					<h2 class="title">hadrian's wall</h2>
+					<input type="checkbox" name="" id="" />
+				</div>
+				<div>
+					<small class="title">This is a sub text</small>
+				</div>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
+					adipisci dolor ex a ipsum ullam provident aliquam iure? Laudantium
+					totam itaque unde perferendis magnam facilis odit doloremque, quaerat
+					ipsum consequatur.
+				</p>
+				<mark>This is my favorite</mark>
+			</article>
+			<article id="terraforming">
+				<div>
+					<h2 class="title">terraforming mars</h2>
+					<input type="checkbox" name="" id="" />
+				</div>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
+					adipisci dolor ex a ipsum ullam provident aliquam iure? Laudantium
+					totam itaque unde perferendis magnam facilis odit doloremque, quaerat
+					ipsum consequatur.
+				</p>
+			</article>
+			<article id="catan">
+				<div>
+					<h2 class="title">catan</h2>
+					<input type="checkbox" name="" id="" />
+				</div>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
+					adipisci dolor ex a ipsum ullam provident aliquam iure? Laudantium
+					totam itaque unde perferendis magnam facilis odit doloremque, quaerat
+					ipsum consequatur.
+				</p>
+			</article>
+			<article id="risk">
+				<div>
+					<h2 class="title">risk</h2>
+					<input type="checkbox" name="" id="" />
+				</div>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
+					adipisci dolor ex a ipsum ullam provident aliquam iure? Laudantium
+					totam itaque unde perferendis magnam facilis odit doloremque, quaerat
+					ipsum consequatur.
+				</p>
+			</article>
+			<article id="civilization">
+				<div>
+					<h2 class="title">civilization</h2>
+					<input type="checkbox" name="" id="" />
+				</div>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
+					adipisci dolor ex a ipsum ullam provident aliquam iure? Laudantium
+					totam itaque unde perferendis magnam facilis odit doloremque, quaerat
+					ipsum consequatur.
+				</p>
+			</article>
+		</main>
 
-		<div class="text-container">
-			<h3>Title</h3>
-			<div><img src="" alt="" /></div>
-
-			<p>Lorem ipsum dolor sit amet.</p>
-		</div>
-
-		<ul>
-			<li><a href="https://www.google.com">google</a></li>
-			<li><a href="http://ironhack.com">ironhack</a></li>
-			<li><a href="http://space-jam.com/1996">Space jam</a></li>
-		</ul>
-
-		<article><h1 id="main-title">Title</h1></article>
-		<article><h2>Sub-title</h2></article>
-		<article>
-			<h2>Sub-title</h2>
-			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla iusto
-				cupiditate ipsam aliquam aperiam atque quae distinctio, quasi
-				blanditiis, eligendi nostrum nam voluptatibus ea dolores nobis. Voluptas
-				perspiciatis accusamus voluptatum!
-			</p>
-		</article>
-
-		<input type="text" placeholder="Type your name" />
-
-		<input type="password" />
+		<table>
+			<thead>
+				<tr>
+					<th>name</th>
+					<th>Release date</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Hadrian wall</td>
+					<td>2024</td>
+				</tr>
+				<tr>
+					<td>Civilization</td>
+					<td>1996</td>
+				</tr>
+				<tr>
+					<td>Risk</td>
+					<td>1970</td>
+				</tr>
+				<tr>
+					<td>Catan</td>
+					<td>1980</td>
+				</tr>
+				<tr>
+					<td>Catan</td>
+					<td>1980</td>
+				</tr>
+				<tr>
+					<td>Catan</td>
+					<td>1980</td>
+				</tr>
+				<tr>
+					<td>Catan</td>
+					<td>1980</td>
+				</tr>
+				<tr>
+					<td>Catan</td>
+					<td>1980</td>
+				</tr>
+				<tr>
+					<td>Catan</td>
+					<td>1980</td>
+				</tr>
+				<tr>
+					<td>Catan</td>
+					<td>1980</td>
+				</tr>
+				<tr>
+					<td>Catan</td>
+					<td>1980</td>
+				</tr>
+				<tr>
+					<td>Catan</td>
+					<td>1980</td>
+				</tr>
+			</tbody>
+		</table>
 	</body>
 </html>
